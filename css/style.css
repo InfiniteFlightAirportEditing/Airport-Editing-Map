@@ -1,0 +1,115 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.icon {
+    position: absolute;
+    padding-top: 13px;
+    margin-right: 5px;
+}
+
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.brand-logo {
+    color: #FFFFFF !important;
+    font-family: 'Abel', sans-serif;
+    left: 55px;
+}
+
+@media only screen and (min-width: 601px) {
+.icon {
+    position: absolute;
+    padding-top: 13px;
+    margin-right: 5px;
+}
+}
+
+nav .brand-logo img {
+    vertical-align: middle;
+    max-height: 34px;
+    margin-bottom: 0.25em;
+}
+
+nav .brand-logo {
+    position: absolute;
+    font-size: 2.1rem;
+    padding: 0;
+}
+
+nav .brand-logo, nav ul a {
+    color: #fff;
+    display: inline-block;
+}
+    
+.card-avatar
+ img {
+    height: 120px;
+    width: 120px;
+    border-radius: 75px;
+    margin-top: 15px;
+}
+
+.card-avatar .waves-effect {
+    text-align: center;
+    margin-top: -10px;
+}
+
+img {
+    border: 0;
+}
+
+.waves-block {
+    display: block;
+}
+
+.input-field label {
+    color: #192229;
+}
+
+.input-field input[type=text]:focus + label {
+    color: #192229;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #192229;
+    box-shadow: 0 1px 0 0 #192229;
+}
+
+.input-field input[type=email]:focus + label {
+    color: #192229;
+}
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #192229;
+    box-shadow: 0 1px 0 0 #192229;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin-top: 0px;
+  margin: 0;
+  padding: 0;
+}
