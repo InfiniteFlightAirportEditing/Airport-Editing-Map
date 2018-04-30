@@ -3,7 +3,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport">
-	<title>Airport map - Infinite Flight Airport Editing</title>
+	<title>Reworked airports map - Infinite Flight Airport Editing</title>
 	<meta content="en" name="language">
 	<meta content="A map of all reworked airports included in the mobile flight simulator, Infinite Flight.">
 	<meta content="Infinite Flight, Airport Editing, IFAE, Infinite Flight Airport Editing, IF airport editing, airports, editing, IF, Infinite Flight Community, map, airport map, global flight, airport global" name="keywords">
@@ -26,24 +26,24 @@
 <body>
 	<header>
 		<nav class="light-blue lighten-1" role="navigation">
-			<a class="brand-logo" href="index.html"><img alt="" class="logo-img" src="images/airport-editing.png"></a>
+			<a class="brand-logo" href=""><img alt="" class="logo-img" src="images/airport-editing.png"></a>
 			<ul class="right hide-on-med-and-down">
 				<li>
-					<a href="#additional-information">Additional information</a>
+					<a href="#about">About</a>
 				</li>
 			</ul>
 			<ul class="side-nav" id="nav-mobile">
 				<li>
-					<a class="subheader">Reworked airports map</a>
+					<a class="header">Reworked airports map</a>
 				</li>
 				<li>
 					<div class="divider"></div>
 				</li>
 				<li>
-					<a href="#additional-information">Additional information</a>
+					<a href="#about">About</a>
 				</li>
 				<li>
-					<a href="http://airportediting.com/">Airport Editing</a>
+					<a href="https://airportediting.com/">Infinite Flight Airport Editing</a>
 				</li>
 				<li>
 					<a href="https://community.infinite-flight.com/">Infinite Flight Community</a>
@@ -51,13 +51,13 @@
 			</ul><a class="button-collapse" data-activates="nav-mobile" href="#"><i class="material-icons">menu</i></a>
 		</nav>
 	</header>
-	<div class="modal modal-fixed-footer" id="additional-information">
+	<div class="modal modal-fixed-footer" id="about">
 		<div class="modal-content">
-			<h4>Additional information</h4>
+			<h4>About</h4>
 			<div class="col-md-12">
-				<p>This interactive map shows all airports which has been redone by the <a href="http://airportediting.com/" target="blank">Airport Editing team</a>. This means that all airports you see on this map are going to be in high-quality in Infinite Flight. If it’s not here, no worries, all airports are still included in global flight. They just won’t look as realistic.</p>
-				<p>If you want to help contribute to the project, please visit <a href="http://airportediting.com/" target="blank">airportediting.com</a>.</p><img class="responsive-img" src="images/airport.png">
-				<p><i>Latest data update:</i> 6th October 2017<br>
+				<p>This interactive map shows all airports which have been redone by the <a href="https://airportediting.com/" target="blank">Infinite Flight Airport Editing team</a>. This means that all airports you see on this map are going to be in high-quality in Infinite Flight. Any issues regarding a reworked airport? Feel free to report the issue by using <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwCBqPPIkB_CPuOVWmiVQ4BhQLr3wNY6s91kvMk5CuDqW4zQ/viewform?usp=send_form" target="blank">our dedicated form</a>.</p>
+				<p>If you are interested in contributing to the project, please visit <a href="https://airportediting.com/" target="blank">airportediting.com</a>.</p><img class="responsive-img" src="images/airport.png">
+				<p><i>Latest data update:</i> 30th April 2018<br>
 				Website made by Adrien Zaradez.</p>
 			</div>
 		</div>
@@ -92,7 +92,7 @@
 	         });
 
 	       var ctaLayer = new google.maps.KmlLayer({
-	         url: 'https://gist.githubusercontent.com/Adrien-Z/8ba43c6e36aa3be71f7c5ff92ff54b2d/raw/6b647a9bf1f06bd0d88f77b349e6dd1929256b0e/airports.kml',
+	         url: 'https://gist.githubusercontent.com/Adrien-Z/5a427a8acf1ec1b612fe6f023a44401c/raw/b2d499abf720b684e03f11c5b86dd021d1a57c93/airports.kml',
 	         map: map,
 	         preserveViewport: true,
 	       });

@@ -1,5 +1,4 @@
-# Airport Editing map
-A map of all reworked airports by the Infinite Flight Airport Editing team.
+# Reworked airports map - Infinite Flight Airport Editing
+An interactive map which shows all reworked airports by the Infinite Flight Airport Editing team, made using the Google Maps Javascript API.
 
-![Map preview](https://i.imgur.com/04NCE0R.jpg)
-Made using the Google Maps Javascript API.
+![Map preview](https://i.imgur.com/AqBsqpZ.jpg)
