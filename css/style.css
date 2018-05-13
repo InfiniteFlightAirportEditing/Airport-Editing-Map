@@ -1,8 +1,9 @@
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
+
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
 }
 
 .icon {
@@ -27,11 +28,11 @@ nav .brand-logo {
 }
 
 @media only screen and (min-width: 601px) {
-.icon {
-    position: absolute;
-    padding-top: 13px;
-    margin-right: 5px;
-}
+    .icon {
+        position: absolute;
+        padding-top: 13px;
+        margin-right: 5px;
+    }
 }
 
 nav .brand-logo img {
@@ -46,13 +47,13 @@ nav .brand-logo {
     padding: 0;
 }
 
-nav .brand-logo, nav ul a {
+nav .brand-logo,
+nav ul a {
     color: #fff;
     display: inline-block;
 }
-    
-.card-avatar
- img {
+
+.card-avatar img {
     height: 120px;
     width: 120px;
     border-radius: 75px;
@@ -72,44 +73,24 @@ img {
     display: block;
 }
 
-.input-field label {
-    color: #192229;
-}
-
-.input-field input[type=text]:focus + label {
-    color: #192229;
-}
-
-.input-field input[type=text]:focus {
-    border-bottom: 1px solid #192229;
-    box-shadow: 0 1px 0 0 #192229;
-}
-
-.input-field input[type=email]:focus + label {
-    color: #192229;
-}
-
-.input-field input[type=email]:focus {
-    border-bottom: 1px solid #192229;
-    box-shadow: 0 1px 0 0 #192229;
-}
-
-html, body {
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #map {
-  height: 100%;
+    height: 100%;
 }
 
-html, body {
-  height: 100%;
-  margin-top: 0px;
-  margin: 0;
-  padding: 0;
+html,
+body {
+    height: 100%;
+    margin-top: 0px;
+    margin: 0;
+    padding: 0;
 }

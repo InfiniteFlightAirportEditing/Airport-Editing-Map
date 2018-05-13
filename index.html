@@ -1,116 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport">
-	<title>Reworked airports map - Infinite Flight Airport Editing</title>
-	<meta content="en" name="language">
-	<meta content="A map of all reworked airports included in the mobile flight simulator, Infinite Flight.">
-	<meta content="Infinite Flight, Airport Editing, IFAE, Infinite Flight Airport Editing, IF airport editing, airports, editing, IF, Infinite Flight Community, map, airport map, global flight, airport global" name="keywords">
-	<meta content="#192229" name="theme-color">
-	<meta content="index, follow" name="robots">
-	<link href="images/airport-editing.png" rel="shortcut icon" type="image/png">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css">
-	<link href="css/style.css" media="screen,projection" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport">
+    <title>Reworked airports map - Infinite Flight Airport Editing</title>
+    <meta content="en" name="language">
+    <meta content="A map of all reworked airports included in the mobile flight simulator, Infinite Flight.">
+    <meta content="Infinite Flight, Airport Editing, IFAE, Infinite Flight Airport Editing, IF airport editing, airports, editing, IF, Infinite Flight Community, map, airport map, global flight, airport global" name="keywords">
+    <meta content="#192229" name="theme-color">
+    <meta content="index, follow" name="robots">
+    <link href="images/airport-editing.png" rel="shortcut icon" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css">
+    <link href="css/style.css" media="screen,projection" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.css' type='text/css' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.min.js'></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107740441-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'UA-107740441-1');
     </script>
 </head>
+
 <body>
-	<header>
-		<nav class="light-blue lighten-1" role="navigation">
-			<a class="brand-logo" href=""><img alt="" class="logo-img" src="images/airport-editing.png"></a>
-			<ul class="right hide-on-med-and-down">
-				<li>
-					<a href="#about">About</a>
-				</li>
-			</ul>
-			<ul class="side-nav" id="nav-mobile">
-				<li>
-					<a class="header">Reworked airports map</a>
-				</li>
-				<li>
-					<div class="divider"></div>
-				</li>
-				<li>
-					<a href="#about">About</a>
-				</li>
-				<li>
-					<a href="https://airportediting.com/">Infinite Flight Airport Editing</a>
-				</li>
-				<li>
-					<a href="https://community.infinite-flight.com/">Infinite Flight Community</a>
-				</li>
-			</ul><a class="button-collapse" data-activates="nav-mobile" href="#"><i class="material-icons">menu</i></a>
-		</nav>
-	</header>
-	<div class="modal modal-fixed-footer" id="about">
-		<div class="modal-content">
-			<h4>About</h4>
-			<div class="col-md-12">
-				<p>This interactive map shows all airports which have been redone by the <a href="https://airportediting.com/" target="blank">Infinite Flight Airport Editing team</a>. This means that all airports you see on this map are going to be in high-quality in Infinite Flight. Any issues regarding a reworked airport? Feel free to report the issue by using <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwCBqPPIkB_CPuOVWmiVQ4BhQLr3wNY6s91kvMk5CuDqW4zQ/viewform?usp=send_form" target="blank">our dedicated form</a>.</p>
-				<p>If you are interested in contributing to the project, please visit <a href="https://airportediting.com/" target="blank">airportediting.com</a>.</p><img class="responsive-img" src="images/airport.png">
-				<p><i>Latest data update:</i> 30th April 2018<br>
-				Website made by Adrien Zaradez.</p>
-			</div>
-		</div>
-		<div class="modal-footer">
-			<a class=" modal-action modal-close waves-effect waves-light btn-flat">Close</a>
-		</div>
-	</div>
-	<div id="map"></div>
-	<script>
+    <header>
+        <nav class="light-blue lighten-1" role="navigation">
+            <a class="brand-logo" href=""><img alt="" class="logo-img" src="images/airport-editing.png"></a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="nav-mobile">
+                <li>
+                    <a class="header">Reworked airports map</a>
+                </li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="https://airportediting.com/">Infinite Flight Airport Editing</a>
+                </li>
+                <li>
+                    <a href="https://community.infinite-flight.com/">Infinite Flight Community</a>
+                </li>
+            </ul><a class="button-collapse" data-activates="nav-mobile" href="#"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div class="modal modal-fixed-footer" id="about">
+        <div class="modal-content">
+            <h4>About</h4>
+            <div class="col-md-12">
+                <p>This interactive map shows all airports which have been redone by the <a href="https://airportediting.com/" target="blank">Infinite Flight Airport Editing team</a>. This means that all airports you see on this map are going to be in high-quality in Infinite Flight. Any issues regarding a reworked airport? Feel free to report the issue by using <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwCBqPPIkB_CPuOVWmiVQ4BhQLr3wNY6s91kvMk5CuDqW4zQ/viewform?usp=send_form" target="blank">our dedicated form</a>.</p>
+                <p>If you are interested in contributing to the project, please visit <a href="https://airportediting.com/" target="blank">airportediting.com</a>.</p><img class="responsive-img" src="images/airport.png">
+                <p><i>Latest data update:</i> 30th April 2018<br> Website made by Adrien Zaradez.</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-light btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWRyaWVuLXoiLCJhIjoiY2l1bzZvYXp3MDAxYjJvbnoyem04ZWllYSJ9.RpSLasDbqe-QiqCje0GFrA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/adrien-z/cjh306api1ue32squqqhysx8g',
+            center: [-1.565394, 28.774876],
+            zoom: 1.3
+        });
 
-	   function initMap() {
-	     var map = new google.maps.Map(document.getElementById('map'), {
-	         center: new google.maps.LatLng(23.947032, -31.992719),
-	         zoom: 2,
-	           mapTypeControl: true,
-	           mapTypeControlOptions: {
-	               style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-	           },
-	           zoomControl: true,
-	           zoomControlOptions: {
-	               position: google.maps.ControlPosition.RIGHT_BOTTOM
-	           },
-	           scaleControl: false,
-	           streetViewControl: false,
-	           gestureHandling: 'auto',
-	           fullscreenControl: false,
-	           disableDoubleClickZoom: true,
-	           scrollwheel: true,
-	           draggable : true,
-	           clickableIcons: false,
-	           mapTypeId: google.maps.MapTypeId.ROADMAP,
-	         });
+        map.on('click', function(e) {
+            var features = map.queryRenderedFeatures(e.point, {
+                layers: ['completed-airports']
+            });
 
-	       var ctaLayer = new google.maps.KmlLayer({
-	         url: 'https://gist.githubusercontent.com/Adrien-Z/5a427a8acf1ec1b612fe6f023a44401c/raw/b2d499abf720b684e03f11c5b86dd021d1a57c93/airports.kml',
-	         map: map,
-	         preserveViewport: true,
-	       });
-	     }
-	     
-	</script> 
-	<script>
-	        $(document).ready(function() {
-	        $('.modal').modal();
-	        });
-	</script> 
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvdGDAAL_vRYJRgE7Ypge_u8cXSgXfAsw&callback=initMap">
-	</script> 
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js">
-	</script> 
-	<script src="js/materialize.js">
-	</script> 
-	<script src="js/init.js">
-	</script>
+            if (!features.length) {
+                return;
+            }
+
+            var feature = features[0];
+
+            var popup = new mapboxgl.Popup({
+                    offset: [0, -15]
+                })
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML('<p>' + feature.properties.Description + '</p>')
+                .setLngLat(feature.geometry.coordinates)
+                .addTo(map);
+        });
+
+        map.addControl(new MapboxGeocoder({
+            accessToken: 'pk.eyJ1IjoiYWRyaWVuLXoiLCJhIjoiY2l1bzZvYXp3MDAxYjJvbnoyem04ZWllYSJ9.RpSLasDbqe-QiqCje0GFrA'
+        }));
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.modal').modal();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="js/materialize.js">
+    </script>
+    <script src="js/init.js">
+    </script>
 </body>
+
 </html>
