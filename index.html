@@ -14,11 +14,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css">
     <link href="css/style.css" media="screen,projection" rel="stylesheet" type="text/css">
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.css' type='text/css' />
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.min.js'></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107740441-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -101,10 +99,6 @@
                 .setLngLat(feature.geometry.coordinates)
                 .addTo(map);
         });
-
-        map.addControl(new MapboxGeocoder({
-            accessToken: 'pk.eyJ1IjoiYWRyaWVuLXoiLCJhIjoiY2l1bzZvYXp3MDAxYjJvbnoyem04ZWllYSJ9.RpSLasDbqe-QiqCje0GFrA'
-        }));
     </script>
     <script>
         $(document).ready(function() {
