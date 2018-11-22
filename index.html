@@ -64,7 +64,7 @@
             <div class="col-md-12">
                 <p>This interactive map shows all airports which have been redone by the <a href="https://airportediting.com/" target="blank">Infinite Flight Airport Editing team</a>. This means that all airports you see on this map are going to be in high-quality in Infinite Flight. Any issues regarding a reworked airport? Feel free to report the issue by using <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwCBqPPIkB_CPuOVWmiVQ4BhQLr3wNY6s91kvMk5CuDqW4zQ/viewform?usp=send_form" target="blank">our dedicated form</a>.</p>
                 <p>If you are interested in contributing to the project, please visit <a href="https://airportediting.com/" target="blank">airportediting.com</a>.</p><img class="responsive-img" src="images/airport.png">
-                <p><i>Latest data update:</i> 3rd July 2018<br> Website made by Adrien Zaradez.</p>
+                <p><i>Latest data update:</i> 22nd November 2018<br> Website made by Adrien Zaradez.</p>
             </div>
         </div>
         <div class="modal-footer">
@@ -96,7 +96,7 @@
                     offset: [0, -15]
                 })
                 .setLngLat(feature.geometry.coordinates)
-                .setHTML('<p>' + feature.properties.Description + '</p>')
+                .setHTML('<p><i>Name:</i> ' + feature.properties.Airport + '<br><i>ICAO:</i> ' + feature.properties.ICAO + '<br><i>Description:</i> ' + feature.properties.Description + '</p>')
                 .setLngLat(feature.geometry.coordinates)
                 .addTo(map);
         });
